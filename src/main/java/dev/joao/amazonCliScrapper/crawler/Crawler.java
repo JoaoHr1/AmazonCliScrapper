@@ -38,7 +38,9 @@ public class Crawler {
                     }
                     System.out.println("Preço: R$" + price + priceFraction);
                     System.out.println("Link: " + link);
-                    System.out.println("-----------------------------");
+                    System.out.println("");
+                    System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                    System.out.println("");
                 }
             }
             System.out.println("Fim da lista, carregue mais produtos digitando o comando novamente!" );
@@ -46,6 +48,7 @@ public class Crawler {
             Logger.getGlobal().log(Level.WARNING, "Erro ao carregar URL, tente novamente!");
         }
     }
+
 }
 
 
