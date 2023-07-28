@@ -8,6 +8,7 @@ public class AmazonCliScrapperApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AmazonCliScrapperApplication.class, args);
+
 	}
 
 }

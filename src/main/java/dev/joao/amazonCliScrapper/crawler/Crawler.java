@@ -30,7 +30,7 @@ public class Crawler {
                     String link = "https://www.amazon.com.br" + linkElement.attr("href");
 
 
-                    if (descriptionElements.get(0).text().split("\\s+").length > 2) {
+                    if (descriptionElements.get(0).text().split("\\s+").length > 3) {
                         System.out.println("Produto: " + description);
                     } else {
                         System.out.println("teste: ");
