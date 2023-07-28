@@ -13,6 +13,7 @@ public class Crawler {
     public Crawler(String url) {
 
         try {
+            System.out.println("Carregando lista de produtos...");
             Document document = Jsoup.connect(url).get();
             Elements titleItem = document.select(".s-result-item");
 
@@ -22,7 +23,7 @@ public class Crawler {
                 Element priceFractionElement = element.selectFirst(".a-price-fraction");
                 Element linkElement = element.selectFirst(".a-link-normal");
 
-                if (priceElement != null && descriptionElements != null && priceFractionElement != null && linkElement != null) {
+                if (priceElement != null && priceFractionElement != null && linkElement != null) {
                     String price = priceElement.text();
                     String description = descriptionElements.get(0).text();
 
@@ -38,9 +39,9 @@ public class Crawler {
                     System.out.println("Preço: R$" + price + priceFraction);
                     System.out.println("Link: " + link);
                     System.out.println("-----------------------------");
-
                 }
             }
+            System.out.println("Fim da lista, carregue mais produtos digitando o comando novamente!" );
         } catch (IOException e) {
             Logger.getGlobal().log(Level.WARNING, "Erro ao carregar URL, tente novamente!");
         }
