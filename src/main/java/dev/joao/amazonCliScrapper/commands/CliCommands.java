@@ -22,4 +22,9 @@ public class CliCommands {
         Crawler crawler = new Crawler("https://www.amazon.com.br/s?k=notebook&crid=YYVVBP69OUX6&sprefix=%2Caps%2C805&ref=nb_sb_ss_recent_1_0_recent%22");
     }
 
+    @ShellMethod(key = "4", value = "Busca personalizada no site da Amazon. EX: 4 camisa")
+    public void buscar(String busca) {
+        Crawler crawler = new Crawler("https://www.amazon.com.br/s?k="+ busca +"&crid=YYVVBP69OUX6&sprefix=%2Caps%2C805&ref=nb_sb_ss_recent_1_0_recent%22");
+    }
+
 }

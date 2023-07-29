@@ -31,11 +31,13 @@ public class Crawler {
                     String priceFraction = priceFractionElement.text();
                     String link = "https://www.amazon.com.br" + linkElement.attr("href");
                     String shortLink = new ShortLink().Shorter(link);
-                    if (descriptionElements.get(0).text().split("\\s+").length > 4) {
+
+                    if (descriptionElements.get(0).text().split("\\s+").length > 2) {
                         System.out.println("| Produto: " + description);
                     } else {
                         System.out.println("| Produto: " + description + " " + descriptionElements.get(1).text());
                     }
+
                     System.out.println("| Preço: R$" + price + priceFraction);
                     System.out.println("| Link: " + shortLink);
                     System.out.println("| ");
