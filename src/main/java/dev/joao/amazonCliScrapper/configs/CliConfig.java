@@ -15,6 +15,5 @@ public class CliConfig implements PromptProvider {
     public final AttributedString getPrompt() {
         return new AttributedString("AmazonCliScrapper:>",
                 AttributedStyle.DEFAULT.foreground(AttributedStyle.BLUE));
-
     }
 }
